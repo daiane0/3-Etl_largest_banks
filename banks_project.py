@@ -11,9 +11,9 @@ def log_progress(message):
     timestamp_format = '%Y-%h-%d-%H:%M:%S' # Year-Monthname-Day-Hour-Minute-Second 
     now = datetime.now() # get current timestamp 
     timestamp = now.strftime(timestamp_format) 
-    with open("./code_log.txt","a") as f: 
+    with open(r".\\code_log.txt","a") as f: 
         f.write(timestamp + ' : ' + message + '\n')
-    '''registra a mensagem mencionada em um determinado estágio da execução em um arquivo de log'''
+
     
 def extract(url, table_attribs):
     pag = requests.get(url).text
@@ -41,9 +41,9 @@ def transform(df):
     mc_gbp_list = [np.round(x*0.8, 2) for x in mc_usd_list]
     mc_inr_list = [np.round(x*82.95, 2) for x in mc_usd_list]
     
-    df = pd.DataFrame({'mc_gbp_billion': mc_eur_list,
-                       'mc_gbp_billion': mc_gbp_list,
-                       'mc_inr_list': mc_inr_list})
+    df['mc_eur_billion'] = mc_eur_list
+    df['mc_gbp_billion'] = mc_gbp_list
+    df['mc_inr_billion'] = mc_inr_list
     return df
 def load_to_csv(df, output_path):
     ''' This function saves the final data frame as a CSV file in
@@ -100,7 +100,7 @@ load_to_db(df, sql_connection, table_name)
 
 log_progress('Data loaded to Database as a table, Executing queries')
 
-query_statment = f"SELECT AVG(MC_GBP_Billion) FROM {table_name}"
+query_statment = f"SELECT AVG(mc_gbp_billion) FROM {table_name}"
 
 run_query(query_statment, sql_connection)
 

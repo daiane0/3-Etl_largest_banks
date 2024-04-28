@@ -19,7 +19,7 @@
   - Extrair as informações para o escritório de Nova Delhi, ou seja, Nome e MC_INR_Billion.
 * Escrever uma função para registrar o progresso do código.
 
-### 
+---
 Este projeto foi desenvolvido como parte da Formação de Engenheiro de Dados da IBM na plataforma Coursera. Créditos ao curso e aos seus instrutores por fornecerem a base para este exercício.
 
 

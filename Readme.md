@@ -4,7 +4,7 @@
   compilar uma lista dos 10 maiores bancos do mundo classificados por capitalização de mercado em bilhões de dólares americanos. Além disso, é necessário transformar os dados e armazená-los em dólares americanos, libras esterlinas, euros e rúpias indianas de acordo com as informações de taxa de câmbio disponibilizadas em um arquivo CSV. A tabela de informações processadas deve ser salva localmente em formato CSV e como uma tabela de banco de dados. Gerentes de diferentes países irão consultar a tabela do banco de dados para extrair a lista e observar o valor da capitalização de mercado em sua própria moeda.
 
 ### Fonte:
-  [Lista dos maiores bancos](https://web.archive.org/web/20230908091635 /https://en.wikipedia.org/wiki/List_of_largest_banks)
+(https://web.archive.org/web/20230908091635%20/https://en.wikipedia.org/wiki/List_of_largest_banks)
 
 ## Etapas:
 
